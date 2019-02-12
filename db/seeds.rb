@@ -7,9 +7,9 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-5.times do
+10.times do
   title = Faker::Job.title
   details = Faker::Quote.famous_last_words
-  Task.create title: title, details: details
+  completed = rand(1..10) > 5
+  Task.create title: title, details: details, completed: completed
 end
-

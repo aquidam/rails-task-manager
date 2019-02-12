@@ -1,4 +1,4 @@
-<h1>All tasks:</h1>
+<h1>My tasks</h1>
 <ul>
   <% @tasks.each do |task| %>
     <li><%= task.completed ? "[x]" : "[ ]"%><%= link_to task.title, task_path(task) %></li>
